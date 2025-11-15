@@ -1,0 +1,13 @@
+2025-11-12 16:24:49.433 [warning] Settings pattern "mcp" doesn't match any settings
+2025-11-12 16:24:49.445 [warning] SettingsEditor2: Settings not included in settingsLayout.ts: github.copilot.chat.agent.terminal.allowList, github.copilot.chat.agent.terminal.denyList
+2025-11-12 16:24:49.505 [info] Started local extension host with pid 60226.
+2025-11-12 16:24:50.132 [warning] Settings pattern "GitHub.copilot.manageExtension" doesn't match any settings
+2025-11-12 16:24:50.499 [warning] Settings pattern "mcp" doesn't match any settings
+2025-11-12 16:24:51.256 [error] An unknown error occurred. Please consult the log for more details.
+2025-11-12 16:24:51.484 [info] Settings Sync: Account status changed from uninitialized to unavailable
+2025-11-12 16:24:51.728 [info] MCP Registry configured: https://api.mcp.github.com/2025-09-15
+2025-11-12 16:24:52.359 [warning] Settings pattern "mcp" doesn't match any settings
+2025-11-12 16:24:54.170 [info] [perf] Render performance baseline is 30ms
+2025-11-12 16:24:54.563 [warning] Settings pattern "mcp" doesn't match any settings
+2025-11-12 16:24:55.313 [warning] Settings pattern "mcp" doesn't match any settings
+2025-11-12 16:27:04.779 [warning] Settings pattern "mcp" doesn't match any settings

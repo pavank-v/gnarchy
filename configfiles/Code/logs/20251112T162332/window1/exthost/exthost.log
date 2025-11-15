@@ -1,0 +1,19 @@
+2025-11-12 16:23:34.029 [info] Extension host with pid 59704 started
+2025-11-12 16:23:34.107 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-11-12 16:23:34.146 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-11-12 16:23:34.173 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-11-12 16:23:34.181 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-11-12 16:23:34.231 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-11-12 16:23:34.438 [info] ExtensionService#_doActivateExtension vscode.terminal-suggest, startup: false, activationEvent: 'onTerminalShellIntegration:*'
+2025-11-12 16:23:34.612 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-11-12 16:23:34.615 [info] ExtensionService#_doActivateExtension nowsci.glassit-linux, startup: true, activationEvent: '*'
+2025-11-12 16:23:34.665 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-11-12 16:23:34.720 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-11-12 16:23:34.843 [info] Eager extensions activated
+2025-11-12 16:23:34.861 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-11-12 16:23:34.864 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-11-12 16:23:34.879 [info] ExtensionService#_doActivateExtension vscodevim.vim, startup: false, activationEvent: 'onStartupFinished'
+2025-11-12 16:23:35.981 [error] Error: ENOENT: no such file or directory, open '/home/pavan/.config/Code/User/globalStorage/vscodevim.vim/.registers'
+2025-11-12 16:24:36.897 [info] Extension host terminating: renderer closed the MessagePort
+2025-11-12 16:24:36.921 [error] Error: ENOENT: no such file or directory, open '/home/pavan/.config/Code/User/globalStorage/vscodevim.vim/.registers'
+2025-11-12 16:24:36.922 [info] Extension host with pid 59704 exiting with code 0

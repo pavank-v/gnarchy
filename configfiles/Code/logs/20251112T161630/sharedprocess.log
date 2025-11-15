@@ -1,0 +1,18 @@
+2025-11-12 16:17:01.880 [info] Getting Manifest... nowsci.glassit-linux
+2025-11-12 16:17:01.983 [info] Installing extension: nowsci.glassit-linux {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/pavan/.vscode/extensions/extensions.json","path":"/home/pavan/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"productVersion":{"version":"1.105.1","date":"2025-10-14T22:33:36.618Z"}}
+2025-11-12 16:17:03.977 [info] Extension signature verification result for nowsci.glassit-linux: Success. Internal Code: 0. Executed: true. Duration: 1479ms.
+2025-11-12 16:17:03.991 [info] Extracted extension to file:///home/pavan/.vscode/extensions/nowsci.glassit-linux-1.0.0: nowsci.glassit-linux
+2025-11-12 16:17:03.997 [info] Renamed to /home/pavan/.vscode/extensions/nowsci.glassit-linux-1.0.0
+2025-11-12 16:17:04.007 [info] Extension installed successfully: nowsci.glassit-linux vscode-userdata:/home/pavan/.vscode/extensions/extensions.json
+2025-11-12 16:17:31.288 [info] Getting Manifest... vscodevim.vim
+2025-11-12 16:17:31.496 [info] Installing extension: vscodevim.vim {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/pavan/.vscode/extensions/extensions.json","path":"/home/pavan/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"productVersion":{"version":"1.105.1","date":"2025-10-14T22:33:36.618Z"}}
+2025-11-12 16:17:32.546 [info] Extension signature verification result for vscodevim.vim: Success. Internal Code: 0. Executed: true. Duration: 469ms.
+2025-11-12 16:17:32.585 [info] Extracted extension to file:///home/pavan/.vscode/extensions/vscodevim.vim-1.32.1: vscodevim.vim
+2025-11-12 16:17:32.591 [info] Renamed to /home/pavan/.vscode/extensions/vscodevim.vim-1.32.1
+2025-11-12 16:17:32.600 [info] Extension installed successfully: vscodevim.vim vscode-userdata:/home/pavan/.vscode/extensions/extensions.json
+2025-11-12 16:18:35.645 [info] Getting Manifest... enkia.tokyo-night
+2025-11-12 16:18:35.747 [info] Installing extension: enkia.tokyo-night {"isMachineScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/pavan/.vscode/extensions/extensions.json","path":"/home/pavan/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"productVersion":{"version":"1.105.1","date":"2025-10-14T22:33:36.618Z"}}
+2025-11-12 16:18:36.717 [info] Extension signature verification result for enkia.tokyo-night: Success. Internal Code: 0. Executed: true. Duration: 501ms.
+2025-11-12 16:18:36.727 [info] Extracted extension to file:///home/pavan/.vscode/extensions/enkia.tokyo-night-1.1.2: enkia.tokyo-night
+2025-11-12 16:18:36.733 [info] Renamed to /home/pavan/.vscode/extensions/enkia.tokyo-night-1.1.2
+2025-11-12 16:18:36.743 [info] Extension installed successfully: enkia.tokyo-night vscode-userdata:/home/pavan/.vscode/extensions/extensions.json

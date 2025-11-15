@@ -1,0 +1,2 @@
+2025-11-12 16:40:07.812 [info] Revived process, old id 1762944057038-1 -> new id 1
+2025-11-12 16:40:08.117 [error] Failed to set sticky bit on /tmp/pavan-code-zsh: Error: ENOENT: no such file or directory, chmod '/tmp/pavan-code-zsh'

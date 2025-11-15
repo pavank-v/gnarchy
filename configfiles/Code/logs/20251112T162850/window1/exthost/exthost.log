@@ -1,0 +1,3 @@
+2025-11-12 16:28:51.433 [info] Extension host with pid 60831 started
+2025-11-12 16:28:51.458 [info] Extension host terminating: renderer closed the MessagePort
+2025-11-12 16:28:51.459 [info] Extension host with pid 60831 exiting with code 0

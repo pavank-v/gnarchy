@@ -1,0 +1,66 @@
+{
+    "telemetry.sqmId": "",
+    "telemetry.machineId": "6cb98d2eb2b033a0ddfb4e09a5e29f4cb27125c3f1dd044f5f5c2df916764a54",
+    "telemetry.devDeviceId": "e542e477-102c-4121-917f-954c9cd1569a",
+    "backupWorkspaces": {
+        "workspaces": [],
+        "folders": [],
+        "emptyWindows": [
+            {
+                "backupFolder": "1762944057038"
+            }
+        ]
+    },
+    "windowControlHeight": 36,
+    "profileAssociations": {
+        "workspaces": {},
+        "emptyWindows": {
+            "1762944057038": "__default__profile__"
+        }
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#000000",
+    "windowSplash": {
+        "zoomLevel": 0,
+        "baseTheme": "vs-dark",
+        "colorInfo": {
+            "foreground": "#8089b3",
+            "background": "#000000",
+            "editorBackground": "#000000",
+            "titleBarBackground": "#000000",
+            "titleBarBorder": "#1b1e2e",
+            "activityBarBackground": "#000000",
+            "activityBarBorder": "#1f2335",
+            "sideBarBackground": "#000000",
+            "sideBarBorder": "#1b1e2e",
+            "statusBarBackground": "#1f2335",
+            "statusBarBorder": "#1b1e2e",
+            "statusBarNoFolderBackground": "#1f2335",
+            "windowBorder": "#0d0f17"
+        },
+        "layoutInfo": {
+            "sideBarSide": "left",
+            "editorPartMinWidth": 220,
+            "titleBarHeight": 30,
+            "activityBarWidth": 0,
+            "sideBarWidth": 0,
+            "auxiliaryBarWidth": 0,
+            "statusBarHeight": 22,
+            "windowBorder": false
+        }
+    },
+    "windowsState": {
+        "lastActiveWindow": {
+            "backupPath": "/home/pavan/.config/Code/Backups/1762944057038",
+            "uiState": {
+                "mode": 0,
+                "x": 0,
+                "y": 32,
+                "width": 1920,
+                "height": 1048,
+                "zoomLevel": 1
+            }
+        },
+        "openedWindows": []
+    }
+}
