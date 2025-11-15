@@ -100,7 +100,33 @@ fi
 # Colloid Icons
 if [[ ! -d ~/.icons/Colloid-Dark ]]; then
     git clone https://github.com/vinceliuice/Colloid-icon-theme.git /tmp/Colloid-icon-theme
-    /tmp/Colloid-icon-theme/install.sh -t default -c dark
+    /tmp/Colloid-icon-theme/install.sh -t default
+fi
+
+install_extension() {
+    UUID="$1"
+    VERSION=$(curl -s "https://extensions.gnome.org/extension-info/?uuid=$UUID" | jq -r '.shell_version_map."45".version')
+    if [[ "$VERSION" == "null" ]]; then
+        VERSION=$(curl -s "https://extensions.gnome.org/extension-info/?uuid=$UUID" | jq -r '.shell_version_map."46".version')
+    fi
+
+    ZIP_URL="https://extensions.gnome.org/download-extension/$UUID.shell-extension.zip?version=$VERSION"
+
+    echo "→ Downloading $UUID"
+    wget -O "/tmp/$UUID.zip" "$ZIP_URL"
+
+    echo "→ Installing $UUID"
+    gnome-extensions install "/tmp/$UUID.zip" --force
+}
+
+# -------------------------
+# Install Gnome Extensions
+# -------------------------
+if [[ -f gnome-extensions.txt ]]; then
+    echo -e "${YELLOW}-> Installing GNOME extensions... ${RESET}"
+    while IFS= read -r ext; do
+        install_extension "$ext"
+    done < gnome-extensions.txt
 fi
 
 # ----------------------
@@ -109,16 +135,6 @@ fi
 if [[ -f gnome-settings.dconf ]]; then
     echo -e "${YELLOW}-> Restoring gnome settings...${RESET}"
     dconf load /org/gnome/ < gnome-settings.dconf
-fi
-
-# -------------------------
-# Install Gnome Extensions
-# -------------------------
-if [[ -f gnome-extensions.txt ]]; then
-    echo -e "${YELLOW}-> Installing GNOME extensions... ${RESET}"
-    while IFS= read -r ext; do
-        gnome-extensions install "$ext" 2>/dev/null || true
-    done < gnome-extensions.txt
 fi
 
 # -----------------

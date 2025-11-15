@@ -155,7 +155,5 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-yay-git
-yay-git-debug
 yelp
 zsh
