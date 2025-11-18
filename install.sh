@@ -160,7 +160,7 @@ fi
 # --------------------
 if [[ -d configfiles ]]; then
     echo -e "${YELLOW}-> Copying configfiles...${RESET}"
-    cp -r configfiles/.[!.]* ~/.config/
+    cp -r configfiles/* ~/.config/
 fi
 
 # -----------------
