@@ -1,4 +1,3 @@
-azwallpaper@azwallpaper.gitlab.com
 blur-my-shell@aunetx
 hidetopbar@mathieu.bidon.ca
 arcmenu@arcmenu.com

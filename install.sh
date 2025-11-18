@@ -105,15 +105,36 @@ fi
 
 install_extension() {
     UUID="$1"
-    VERSION=$(curl -s "https://extensions.gnome.org/extension-info/?uuid=$UUID" | jq -r '.shell_version_map."45".version')
-    if [[ "$VERSION" == "null" ]]; then
-        VERSION=$(curl -s "https://extensions.gnome.org/extension-info/?uuid=$UUID" | jq -r '.shell_version_map."46".version')
+
+    INFO=$(curl -s "https://extensions.gnome.org/extension-query/?search=$UUID")
+
+    EXT=$(echo "$INFO" | jq -r ".extensions[] | select(.uuid==\"$UUID\")")
+
+    if [[ -z "$EXT" ]]; then
+        echo "✗ Extension not found on GNOME Extensions: $UUID"
+        return
     fi
 
-    ZIP_URL="https://extensions.gnome.org/download-extension/$UUID.shell-extension.zip?version=$VERSION"
+    SHELL_VERSION=$(gnome-shell --version | awk '{print $3}' | cut -d. -f1)
 
-    echo "→ Downloading $UUID"
-    wget -O "/tmp/$UUID.zip" "$ZIP_URL"
+    VERSION=$(echo "$EXT" | jq -r ".shell_version_map.\"$SHELL_VERSION\".version")
+
+    if [[ "$VERSION" == "null" || -z "$VERSION" ]]; then
+        VERSION=$(echo "$EXT" | jq -r '.shell_version_map | to_entries | last.value.version')
+    fi
+
+    if [[ -z "$VERSION" ]]; then
+        echo "✗ Could not determine version for $UUID"
+        return
+    fi
+
+    ZIP_URL="https://extensions.gnome.org/download-extension/${UUID}.shell-extension.zip?version=${VERSION}"
+
+    echo "→ Downloading $UUID (version $VERSION)"
+    wget -O "/tmp/$UUID.zip" "$ZIP_URL" || {
+        echo "✗ Failed downloading $UUID"
+        return
+    }
 
     echo "→ Installing $UUID"
     gnome-extensions install "/tmp/$UUID.zip" --force
