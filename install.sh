@@ -103,25 +103,6 @@ if [[ ! -d ~/.icons/Colloid-Dark ]]; then
     /tmp/Colloid-icon-theme/install.sh -t default
 fi
 
-install_extension() {
-    UUID="$1"
-
-    INFO=$(curl -s "https://extensions.gnome.org/extension-query/?search=$UUID")
-
-    EXT=$(echo "$INFO" | jq -r ".extensions[] | select(.uuid==\"$UUID\")")
-
-    if [[ -z "$EXT" ]]; then
-        echo "✗ Extension not found on GNOME Extensions: $UUID"
-        return
-    fi
-
-    SHELL_VERSION=$(gnome-shell --version | awk '{print $3}' | cut -d. -f1)
-
-    VERSION=$(echo "$EXT" | jq -r ".shell_version_map.\"$SHELL_VERSION\".version")
-
-    if [[ "$VERSION" == "null" || -z "$VERSION" ]]; then
-        VERSION=$(echo "$EXT" | jq -r '.shell_version_map | to_entries | last.value.version')
-
 # -------------------------
 # Install Gnome Extensions
 # -------------------------
