@@ -121,33 +121,22 @@ install_extension() {
 
     if [[ "$VERSION" == "null" || -z "$VERSION" ]]; then
         VERSION=$(echo "$EXT" | jq -r '.shell_version_map | to_entries | last.value.version')
-    fi
-
-    if [[ -z "$VERSION" ]]; then
-        echo "✗ Could not determine version for $UUID"
-        return
-    fi
-
-    ZIP_URL="https://extensions.gnome.org/download-extension/${UUID}.shell-extension.zip?version=${VERSION}"
-
-    echo "→ Downloading $UUID (version $VERSION)"
-    wget -O "/tmp/$UUID.zip" "$ZIP_URL" || {
-        echo "✗ Failed downloading $UUID"
-        return
-    }
-
-    echo "→ Installing $UUID"
-    gnome-extensions install "/tmp/$UUID.zip" --force
-}
 
 # -------------------------
 # Install Gnome Extensions
 # -------------------------
-if [[ -f gnome-extensions.txt ]]; then
-    echo -e "${YELLOW}-> Installing GNOME extensions... ${RESET}"
-    while IFS= read -r ext; do
-        install_extension "$ext"
-    done < gnome-extensions.txt
+if [[ -d extensions ]]; then
+    echo -e "${YELLOW}-> Installing GNOME extensions from local ZIPs... ${RESET}"
+    for zip in extensions/*.zip; do
+        if [[ -f "$zip" ]]; then
+            echo "→ Installing $(basename "$zip")"
+            gnome-extensions install "$zip" --force || {
+                echo "✗ Failed installing $zip"
+            }
+        fi
+    done
+else
+    echo "extensions/ directory is missing. Skipping GNOME extension restore."
 fi
 
 # ----------------------
