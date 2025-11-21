@@ -68,11 +68,12 @@ fi
 # -----------------
 # Setting up neovim
 # -----------------
-git clone https://github.com/pavank-v/nvim ~/.config/nvim
-
-echo -e "${YELLOW}-> Installing Neovim plugins and LSP servers...${RESET}"
-nvim --headless "+Lazy! sync" +qa || true
-nvim --headless "+MasonInstallAll" +qa || true
+if [[ ! -d ~/.config/nvim ]]; then
+    git clone https://github.com/pavank-v/nvim ~/.config/nvim
+    echo -e "${YELLOW}-> Installing Neovim plugins and LSP servers...${RESET}"
+    nvim --headless "+Lazy! sync" +qa || true
+    nvim --headless "+MasonInstallAll" +qa || true
+fi
 
 # ---------------------------
 # Copy Wallpapers to Pictures
